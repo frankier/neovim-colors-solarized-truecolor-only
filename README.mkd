@@ -1,11 +1,16 @@
 This is a version of https://github.com/altercation/vim-colors-solarized
 modified to always use true color (24 bit rgb). This means it will work with
-neovim with the following:
+neovim-qt with the following:
+
+In file `~/.config/nvim/ginit.vim` :
 
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
     set background=light " or dark
+    colorscheme solarized_nvimqt
+    
+For Neovim terminal version, in file `~/.config/nvim/init.vim`, keep :
+    
+    set background=light " or dark
     colorscheme solarized
-
-Normally this wouldn't work with neovim (as of writing) since `gui_running` is always false during initialisation.
 
 For more info see the original.
